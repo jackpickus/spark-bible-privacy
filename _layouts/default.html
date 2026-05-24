@@ -6,158 +6,208 @@
   <title>{{ page.title | default: site.title }}</title>
   <style>
     :root {
-      --bg:      #F5F0E8;
-      --surface: #FDFAF4;
-      --gold:    #C9973B;
-      --olive:   #7A8C5E;
-      --text:    #2C2A25;
-      --muted:   #6B6558;
-      --border:  #E0D8C8;
+      --bg:     #F5F0E8;
+      --gold:   #C9973B;
+      --olive:  #7A8C5E;
+      --text:   #2C2A25;
+      --muted:  #6B6558;
+      --border: #D9CEB8;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: Georgia, "Times New Roman", Times, serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.75;
-      padding: 2rem 1rem 4rem;
+      line-height: 1.7;
+      font-size: 1rem;
     }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 3rem 2.5rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      padding-bottom: 2rem;
+    /* ── Top bar ── */
+    .topbar {
+      background: var(--bg);
       border-bottom: 1px solid var(--border);
+      padding: 1.1rem 2rem;
     }
 
-    .app-icon {
-      width: 72px;
-      height: 72px;
-      background: var(--gold);
-      border-radius: 18px;
-      margin: 0 auto 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: #fff;
+    .topbar-inner {
+      max-width: 760px;
+      margin: 0 auto;
     }
 
-    header h1 {
-      font-size: 1.75rem;
-      font-weight: normal;
-      letter-spacing: 0.01em;
-    }
-
-    .subtitle {
-      color: var(--muted);
+    .topbar-inner a {
       font-size: 0.95rem;
-      margin-top: 0.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      text-decoration: none;
     }
 
-    /* Markdown-rendered body */
+    /* ── Main content ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 5rem;
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .effective-date {
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* ── Markdown content ── */
     .content h2 {
-      font-size: 1.05rem;
-      font-weight: bold;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin: 2.25rem 0 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin: 0 0 0.9rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .content h2:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .content h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 1.75rem 0 0.5rem;
     }
 
     .content p {
       margin-bottom: 1rem;
     }
 
-    .content ul {
-      padding-left: 1.4rem;
+    /* space between consecutive sections */
+    .content h2 + p,
+    .content h2 + table { margin-top: 0; }
+
+    .content ul, .content ol {
+      padding-left: 1.5rem;
       margin-bottom: 1rem;
     }
 
-    .content li { margin-bottom: 0.4rem; }
+    .content li { margin-bottom: 0.35rem; }
 
-    .content a { color: var(--gold); }
+    .content a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-decoration-color: color-mix(in srgb, var(--gold) 40%, transparent);
+      text-underline-offset: 3px;
+    }
 
-    .content strong { font-weight: bold; }
+    .content a:hover {
+      text-decoration-color: var(--gold);
+    }
 
-    /* Data table */
+    .content strong { font-weight: 600; }
+
+    /* ── Section spacing ── */
+    .content > * + h2 { margin-top: 2.5rem; }
+
+    /* ── Data table ── */
     .content table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.9rem;
-      margin: 1rem 0 1.5rem;
+      margin: 1.25rem 0 1.75rem;
     }
 
     .content table th {
       text-align: left;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.73rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
       color: var(--muted);
-      border-bottom: 2px solid var(--border);
-      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 0.75rem 0.5rem 0;
     }
 
+    .content table th:last-child,
+    .content table td:last-child { padding-right: 0; }
+
     .content table td {
-      padding: 0.6rem 0.75rem;
-      border-bottom: 1px solid var(--border);
+      padding: 0.65rem 0.75rem 0.65rem 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
       vertical-align: top;
     }
 
     .content table tr:last-child td { border-bottom: none; }
 
+    /* Storage badges */
     .badge {
       display: inline-block;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.71rem;
       font-weight: 600;
-      padding: 0.15rem 0.55rem;
-      border-radius: 100px;
-      letter-spacing: 0.04em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      letter-spacing: 0.03em;
       white-space: nowrap;
+      border: 1px solid transparent;
     }
 
-    .badge-local  { background: #EAF2E4; color: #3D6B2A; }
-    .badge-remote { background: #FFF0D4; color: #8A5A00; }
+    .badge-local  { background: #edf2e7; border-color: #c5d9b8; color: #3a5e2a; }
+    .badge-remote { background: #fdf3e3; border-color: #e8ceA0; color: #7a4d00; }
 
+    /* ── Footer ── */
     footer {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
       border-top: 1px solid var(--border);
+      padding: 1.75rem 2rem;
       font-size: 0.85rem;
       color: var(--muted);
       text-align: center;
     }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .container { padding: 2rem 1.25rem 4rem; }
+      .page-header h1 { font-size: 1.6rem; }
+      .content table { font-size: 0.82rem; }
+    }
   </style>
 </head>
 <body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="#">Spark Bible</a>
+    </div>
+  </div>
+
   <div class="container">
-    <header>
-      <div class="app-icon">✝</div>
+    <div class="page-header">
       <h1>Privacy Policy</h1>
-      <p class="subtitle">Spark Bible &mdash; Effective May 23, 2026</p>
-    </header>
+      <p class="effective-date">Effective May 23, 2026</p>
+    </div>
 
     <div class="content">
       {{ content }}
     </div>
-
-    <footer>
-      &copy; 2026 Spark Bible. All rights reserved.
-    </footer>
   </div>
+
+  <footer>
+    &copy; 2026 Spark Bible. All rights reserved.
+  </footer>
 </body>
 </html>
