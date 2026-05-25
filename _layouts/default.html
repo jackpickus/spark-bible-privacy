@@ -44,6 +44,22 @@
       text-decoration: none;
     }
 
+    .topbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .topbar-nav .nav-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .topbar-nav .nav-link:hover {
+      color: var(--text);
+    }
+
     /* ── Main content ── */
     .container {
       max-width: 760px;
@@ -190,15 +206,16 @@
 </head>
 <body>
   <div class="topbar">
-    <div class="topbar-inner">
-      <a href="#">MySparkBible</a>
+    <div class="topbar-inner topbar-nav">
+      <a href="/">MySparkBible</a>
+      <a href="/privacy" class="nav-link">Privacy Policy</a>
     </div>
   </div>
 
   <div class="container">
     <div class="page-header">
-      <h1>Privacy Policy</h1>
-      <p class="effective-date">Effective May 23, 2026</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.effective_date %}<p class="effective-date">Effective {{ page.effective_date }}</p>{% endif %}
     </div>
 
     <div class="content">

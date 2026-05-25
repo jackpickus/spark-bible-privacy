@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title | default: site.title }}</title>
+  <style>
+    :root {
+      --bg:     #F5F0E8;
+      --gold:   #C9973B;
+      --olive:  #7A8C5E;
+      --text:   #2C2A25;
+      --muted:  #6B6558;
+      --border: #D9CEB8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 2rem;
+    }
+
+    .topbar-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .topbar-inner a {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .nav-link:hover {
+      color: var(--text);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin: 0 auto 2rem;
+      display: block;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* ── CTA buttons ── */
+    .cta-group {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    .btn-primary {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+
+    /* ── Feature grid ── */
+    .features {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .feature-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      max-width: 760px;
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-decoration-color: color-mix(in srgb, var(--muted) 40%, transparent);
+      text-underline-offset: 3px;
+    }
+
+    footer a:hover { color: var(--text); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      .hero h1 { font-size: 2rem; }
+      .features { padding: 0 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="/">MySparkBible</a>
+      <a href="/privacy" class="nav-link">Privacy Policy</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <img src="/assets/app-icon.png" alt="MySparkBible app icon" class="app-icon" />
+    <h1>Your daily Bible<br>companion</h1>
+    <p class="tagline">A personalized scripture passage every morning, tailored to your mood and spiritual goals.</p>
+    <div class="cta-group">
+      <a href="#" class="btn btn-primary">&#xF8FF;&nbsp; App Store</a>
+      <a href="#" class="btn btn-secondary">&#9654;&nbsp; Google Play</a>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">&#x2728;</div>
+      <h3>Personalized passages</h3>
+      <p>Each day's reading is chosen based on how you're feeling and what you're seeking.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#x1F4DA;</div>
+      <h3>Multiple translations</h3>
+      <p>Read in ESV, NIV, or KJV — whichever speaks most clearly to you.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#x1F514;</div>
+      <h3>Daily reminders</h3>
+      <p>Set a morning reminder so you never miss your moment of reflection.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#x1F512;</div>
+      <h3>Private by design</h3>
+      <p>No account required. No personal data collected. <a href="/privacy">Read our privacy policy.</a></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 MySparkBible. All rights reserved. &mdash;
+    <a href="/privacy">Privacy Policy</a>
+  </footer>
+</body>
+</html>
