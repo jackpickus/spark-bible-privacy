@@ -1,4 +1,4 @@
 ---
 layout: home
-title: "MySparkBible — Daily Bible Companion"
+title: "MyBibleSpark — Daily Bible Companion"
 ---
