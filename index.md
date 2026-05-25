@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Spark Bible — Privacy Policy"
+title: "My Spark Bible — Privacy Policy"
 ---
 
-Spark Bible ("we," "our," or "the app") is a daily Bible companion for iOS and Android.
+My Spark Bible ("we," "our," or "the app") is a daily Bible companion for iOS and Android.
 We are committed to protecting your privacy. This policy explains what information is
 collected, how it is used, and your rights.
 
@@ -33,7 +33,7 @@ We do not sell, rent, or share your data with any other third party.
 
 ## Third-Party AI Service (Anthropic)
 
-Spark Bible uses the Claude API, operated by Anthropic, PBC, to generate scripture
+My Spark Bible uses the Claude API, operated by Anthropic, PBC, to generate scripture
 passages and reflections. When you request a passage, the following non-identifying
 inputs are sent: your selected mood, spiritual goal, preferred translation, and a
 short list of recent Bible references. No device identifiers or personal details are
@@ -44,7 +44,7 @@ Anthropic's data practices are governed by their
 
 ## In-App Purchases and Subscriptions
 
-Spark Bible offers an optional monthly subscription for premium access. All payment
+My Spark Bible offers an optional monthly subscription for premium access. All payment
 transactions are processed entirely by **Apple (App Store)** or **Google (Google Play)**
 — we never see or store your payment card details. The app stores only a boolean flag
 on your device indicating whether an active subscription was detected.
@@ -68,7 +68,7 @@ there is no additional data for us to delete upon request.
 
 ## Children's Privacy
 
-Spark Bible is not directed at children under 13 years of age. We do not knowingly
+My Spark Bible is not directed at children under 13 years of age. We do not knowingly
 collect personal information from children. If you believe a child has provided
 information through the app, please contact us so we can address it promptly.
 
