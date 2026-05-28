@@ -82,4 +82,4 @@ posted constitutes your acceptance of the revised policy.
 ## Contact Us
 
 If you have questions about this privacy policy or our data practices, please contact
-us at [pickj342@yahoo.com](mailto:pickj342@yahoo.com).
+us at [mybiblespark@gmail.com](mailto:mybiblespark@gmail.com).
