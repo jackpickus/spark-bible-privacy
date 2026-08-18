@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Terms of Use"
-effective_date: "June 11, 2026"
+effective_date: "August 17, 2026"
 ---
 
 These Terms of Use ("Terms") govern your access to and use of the MyBibleSpark mobile
@@ -21,6 +21,19 @@ are offered free of charge; others require a paid subscription as described belo
 MyBibleSpark is not directed at children under 13 years of age. By using the app, you
 represent that you are at least 13 years old, or that you are using the app under the
 supervision of a parent or legal guardian who agrees to these Terms.
+
+## Account Registration
+
+You must sign in with **Sign in with Apple** or **Sign in with Google** to use the app.
+You are responsible for maintaining the security of the account you use to sign in and
+for all activity that occurs under your account. You agree to create only one account
+for your own personal use, and not to use another person's account without their
+permission. If you believe your account has been compromised, contact us immediately at
+the email address below.
+
+You may permanently delete your account and associated data at any time from within the
+app (**Settings → Delete Account**). See our [Privacy Policy](/privacy) for details on
+what is deleted and how this interacts with an active subscription.
 
 ## License to Use the App
 
@@ -86,11 +99,11 @@ rights of its respective translation owners.
 
 ## Third-Party Services
 
-The app relies on third-party services, including the Anthropic Claude API and the Apple
-App Store and Google Play stores. Your use of those services may be governed by their own
-terms and policies. We are not responsible for the content, practices, or availability
-of third-party services. Our handling of your data is described in our
-[Privacy Policy](/privacy).
+The app relies on third-party services, including the Anthropic Claude API, Firebase
+Authentication (Google), RevenueCat, and the Apple App Store and Google Play stores.
+Your use of those services may be governed by their own terms and policies. We are not
+responsible for the content, practices, or availability of third-party services. Our
+handling of your data is described in our [Privacy Policy](/privacy).
 
 ## Disclaimer of Warranties
 
@@ -126,9 +139,13 @@ embargo and are not on any U.S. Government restricted-parties list.
 ## Termination
 
 We may suspend or terminate your access to the app at any time if you violate these
-Terms. You may stop using the app at any time by uninstalling it. Provisions that by
-their nature should survive termination — including intellectual-property, disclaimer,
-and limitation-of-liability terms — will survive.
+Terms. You may stop using the app at any time by uninstalling it, or permanently delete
+your account from **Settings → Delete Account**. Neither uninstalling the app nor
+deleting your account cancels an active auto-renewing subscription — that must be
+canceled separately through your Apple App Store or Google Play account settings, as
+described in "Subscriptions, Billing, and Free Trials" above. Provisions that by their
+nature should survive termination — including intellectual-property, disclaimer, and
+limitation-of-liability terms — will survive.
 
 ## Changes to These Terms
 
