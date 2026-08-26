@@ -17,6 +17,7 @@ collected, how it is used, and your rights.
 | Preferred Bible translation (ESV / NIV / KJV) | <span class="badge badge-remote">Sent to server</span> | Determines which translation is returned for your passage |
 | Recently viewed Bible references (last 7) | <span class="badge badge-remote">Sent to server</span> | Helps avoid repeating passages you have seen recently |
 | Daily passage request count, linked to your account | <span class="badge badge-remote">Sent to server</span> | Enforces the daily usage limit for your subscription tier |
+| Device identifier (iOS `identifierForVendor` / Android `ANDROID_ID`) | <span class="badge badge-remote">Sent to server</span> | Prevents free-tier quota abuse by switching accounts on the same device; not linked to your account identity |
 | Cached daily passage and reading history | <span class="badge badge-local">On-device only</span> | Lets you revisit previous passages without an internet connection |
 | Notification preference and reminder time | <span class="badge badge-local">On-device only</span> | Schedules your local daily reminder |
 | Onboarding completion flag | <span class="badge badge-local">On-device only</span> | Skips the intro flow on subsequent launches |
@@ -70,8 +71,16 @@ Anthropic's data practices are governed by their
 We use **Firebase**, a service operated by Google, to authenticate your sign-in and to
 store a minimal, account-linked record on our server: your account identifier and a
 count of how many passages you have requested today. This count resets daily and is
-automatically deleted within about 48 hours of being created. Google's data practices
-are governed by their [Privacy Policy](https://policies.google.com/privacy) and
+automatically deleted within about 48 hours of being created.
+
+We also store a separate, device-linked request count keyed to your device identifier
+rather than your account, used only to prevent the free-tier daily limit from being
+multiplied by switching accounts on the same device. This device-linked count is not
+tied to your account identity, is not affected by account deletion, and is automatically
+deleted within about 48 hours of being created.
+
+Google's data practices are governed by their
+[Privacy Policy](https://policies.google.com/privacy) and
 [Firebase's privacy and security documentation](https://firebase.google.com/support/privacy).
 
 ## Subscription Management (RevenueCat)
