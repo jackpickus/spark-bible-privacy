@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Privacy Policy"
-effective_date: "August 17, 2026"
+effective_date: "August 25, 2026"
 ---
 
 MyBibleSpark ("we," "our," or "the app") is a daily Bible companion for iOS and Android.
@@ -14,7 +14,7 @@ collected, how it is used, and your rights.
 |------|-------------|---------|
 | Name and/or email address (from Sign in with Apple or Google) | <span class="badge badge-remote">Sent to server</span> | Creates and secures your account; see "Account and Sign-In" below |
 | Your mood and spiritual goal selections | <span class="badge badge-remote">Sent to server</span> | Passed to our AI service to personalize your daily passage |
-| Preferred Bible translation (ESV / NIV / KJV) | <span class="badge badge-remote">Sent to server</span> | Determines which translation is returned for your passage |
+| Preferred Bible translation (KJV) | <span class="badge badge-remote">Sent to server</span> | Determines which translation is returned for your passage |
 | Recently viewed Bible references (last 7) | <span class="badge badge-remote">Sent to server</span> | Helps avoid repeating passages you have seen recently |
 | Daily passage request count, linked to your account | <span class="badge badge-remote">Sent to server</span> | Enforces the daily usage limit for your subscription tier |
 | Device identifier (iOS `identifierForVendor` / Android `ANDROID_ID`) | <span class="badge badge-remote">Sent to server</span> | Prevents free-tier quota abuse by switching accounts on the same device; not linked to your account identity |
