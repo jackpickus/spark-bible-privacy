@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Privacy Policy"
-effective_date: "August 25, 2026"
+effective_date: "September 4, 2026"
 ---
 
 MyBibleSpark ("we," "our," or "the app") is a daily Bible companion for iOS and Android.
@@ -17,14 +17,13 @@ collected, how it is used, and your rights.
 | Preferred Bible translation (KJV) | <span class="badge badge-remote">Sent to server</span> | Determines which translation is returned for your passage |
 | Recently viewed Bible references (last 7) | <span class="badge badge-remote">Sent to server</span> | Helps avoid repeating passages you have seen recently |
 | Daily passage request count, linked to your account | <span class="badge badge-remote">Sent to server</span> | Enforces the daily usage limit for your subscription tier |
-| Device identifier (iOS `identifierForVendor` / Android `ANDROID_ID`) | <span class="badge badge-remote">Sent to server</span> | Prevents free-tier quota abuse by switching accounts on the same device; not linked to your account identity |
-| Cached daily passage and reading history | <span class="badge badge-local">On-device only</span> | Lets you revisit previous passages without an internet connection |
+| Device identifier (iOS `identifierForVendor` / Android `ANDROID_ID`) | <span class="badge badge-remote">Sent to server</span> | Caps the number of passages generated per device per day, so the daily limit cannot be multiplied by switching accounts on one device; not linked to your account identity |
+| Your saved passage history — each passage's reference, text, reason, and reflection question, together with the mood, goal, and translation you chose for it and the date | <span class="badge badge-remote">Stored on server</span> | Lets your history follow you to any device you sign in on; see "Saved Passage History" below |
+| Cached copy of your passages | <span class="badge badge-local">On-device only</span> | Lets you revisit previous passages without an internet connection |
 | Notification preference and reminder time | <span class="badge badge-local">On-device only</span> | Schedules your local daily reminder |
 | Onboarding completion flag | <span class="badge badge-local">On-device only</span> | Skips the intro flow on subsequent launches |
 
 We do not collect your location, and we never see or store your payment card details.
-Your mood, goal, translation, and recent-reference selections are used only to generate
-that day's passage request and are not retained on our servers beyond that request.
 
 ## Account and Sign-In
 
@@ -48,9 +47,12 @@ marketing and do not share it with advertisers.
 ## How We Use Your Information
 
 The mood, goal, translation, and recent-reference data listed above are sent to our
-server solely to generate your personalized daily Bible passage. This request is
+server to generate your personalized daily Bible passage. This request is
 forwarded to **Anthropic, PBC** ("Claude AI"), a third-party artificial intelligence
-provider. Anthropic may process this data according to its own
+provider. The passage that comes back is then saved to your account history along with
+the mood, goal, and translation that produced it, as described under "Saved Passage
+History" below. The recent-reference list is used only for that request and is not
+retained. Anthropic may process this data according to its own
 [Privacy Policy](https://www.anthropic.com/privacy).
 We do not sell or rent your data, and we do not share it with any third party other
 than the service providers described in this policy.
@@ -66,18 +68,40 @@ included in this request.
 Anthropic's data practices are governed by their
 [Privacy Policy](https://www.anthropic.com/privacy).
 
+## Saved Passage History
+
+Your passage history is stored on our server under your account, so that it is there
+when you sign in on a new phone or reinstall the app. Each entry holds the passage
+itself — its reference, text, the explanation of why it was chosen, and its reflection
+question — along with the mood and spiritual goal you selected that day, the
+translation, and the date. These entries are linked to your account identifier.
+
+If you had passages saved on your device from before this feature existed, the app
+uploads that existing history to your account once, the first time you sign in after
+updating. This is a one-time transfer of passages already stored on your phone; nothing
+new is collected from you to do it.
+
+History is kept until you delete it. Deleting your account, as described under "Data
+Retention and Deletion" below, permanently deletes your entire saved history from our
+server. Your history is readable only by you: our server returns it only to a request
+carrying a valid sign-in token for your own account, and our database rules block any
+other route to it. We do not use your history for advertising or profiling, and it is
+not sent to Anthropic or any other third party.
+
 ## Authentication and Account Storage (Firebase)
 
 We use **Firebase**, a service operated by Google, to authenticate your sign-in and to
-store a minimal, account-linked record on our server: your account identifier and a
-count of how many passages you have requested today. This count resets daily and is
-automatically deleted within about 48 hours of being created.
+store your account-linked records on our server: your account identifier, your saved
+passage history, and a count of how many passages you have requested today. The daily
+count resets daily and is automatically deleted within about 48 hours of being created.
 
 We also store a separate, device-linked request count keyed to your device identifier
-rather than your account, used only to prevent the free-tier daily limit from being
-multiplied by switching accounts on the same device. This device-linked count is not
-tied to your account identity, is not affected by account deletion, and is automatically
-deleted within about 48 hours of being created.
+rather than your account. It caps how many passages can be generated on a single device
+each day — a ceiling set above the per-account daily limit, so that ordinary sharing of
+one device is unaffected, but the limit cannot be multiplied by signing in and out with
+different accounts on the same phone. This device-linked count is not tied to your
+account identity, is not affected by account deletion, and is automatically deleted
+within about 48 hours of being created.
 
 Google's data practices are governed by their
 [Privacy Policy](https://policies.google.com/privacy) and
@@ -108,13 +132,15 @@ notification settings.
 
 ## Data Retention and Deletion
 
-On-device data (cached passages, reading history, and preferences) is stored in your
-device's local storage. You can delete this data at any time by uninstalling the app.
+On-device data (cached passages and preferences) is stored in your device's local
+storage. You can delete this data at any time by uninstalling the app. Uninstalling
+does not delete the copy of your history saved to your account — that is what lets it
+come back when you reinstall — so use **Delete Account** below if you want it removed.
 
-Your account — your Firebase sign-in record, your daily usage count, and your
-RevenueCat subscriber record — can be permanently deleted at any time from within the
-app: go to **Settings → Delete Account**. This immediately and permanently deletes your
-account and cannot be undone. You can also request deletion by contacting us at the
+Your account — your Firebase sign-in record, your saved passage history, your daily
+usage count, and your RevenueCat subscriber record — can be permanently deleted at any
+time from within the app: go to **Settings → Delete Account**. This immediately and
+permanently deletes your account and everything listed above, and cannot be undone. You can also request deletion by contacting us at the
 email address below.
 
 Deleting your account does **not** cancel an active auto-renewing subscription — Apple
