@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Privacy Policy"
-effective_date: "September 4, 2026"
+effective_date: "September 8, 2026"
 ---
 
 MyBibleSpark ("we," "our," or "the app") is a daily Bible companion for iOS and Android.
@@ -12,25 +12,46 @@ collected, how it is used, and your rights.
 
 | Data | Where stored | Purpose |
 |------|-------------|---------|
-| Name and/or email address (from Sign in with Apple or Google) | <span class="badge badge-remote">Sent to server</span> | Creates and secures your account; see "Account and Sign-In" below |
+| Name and/or email address (from Sign in with Apple or Google) — **only if you choose to create an account** | <span class="badge badge-remote">Sent to server</span> | Creates and secures your account; see "Using the App Without an Account" below |
+| An anonymous identifier, if you continue as a guest | <span class="badge badge-remote">Sent to server</span> | Applies your daily limit and any subscription to you rather than to anyone else; contains no name, email, or other personal detail |
 | Your mood and spiritual goal selections | <span class="badge badge-remote">Sent to server</span> | Passed to our AI service to personalize your daily passage |
 | Preferred Bible translation (KJV) | <span class="badge badge-remote">Sent to server</span> | Determines which translation is returned for your passage |
 | Recently viewed Bible references (last 7) | <span class="badge badge-remote">Sent to server</span> | Helps avoid repeating passages you have seen recently |
 | Daily passage request count, linked to your account | <span class="badge badge-remote">Sent to server</span> | Enforces the daily usage limit for your subscription tier |
 | Device identifier (iOS `identifierForVendor` / Android `ANDROID_ID`) | <span class="badge badge-remote">Sent to server</span> | Caps the number of passages generated per device per day, so the daily limit cannot be multiplied by switching accounts on one device; not linked to your account identity |
-| Your saved passage history — each passage's reference, text, reason, and reflection question, together with the mood, goal, and translation you chose for it and the date | <span class="badge badge-remote">Stored on server</span> | Lets your history follow you to any device you sign in on; see "Saved Passage History" below |
+| Your saved passage history — each passage's reference, text, reason, and reflection question, together with the mood, goal, and translation you chose for it and the date — **only if you have an account** | <span class="badge badge-remote">Stored on server</span> | Lets your history follow you to any device you sign in on; see "Saved Passage History" below |
 | Cached copy of your passages | <span class="badge badge-local">On-device only</span> | Lets you revisit previous passages without an internet connection |
 | Notification preference and reminder time | <span class="badge badge-local">On-device only</span> | Schedules your local daily reminder |
 | Onboarding completion flag | <span class="badge badge-local">On-device only</span> | Skips the intro flow on subsequent launches |
 
 We do not collect your location, and we never see or store your payment card details.
 
+## Using the App Without an Account
+
+**You do not need an account to use MyBibleSpark.** When you request your first passage,
+you can choose **Continue as guest** instead of signing in, and you can keep using the
+app that way indefinitely — including subscribing, if you choose to.
+
+Continuing as a guest creates an anonymous identifier for you through **Firebase
+Authentication**, a service operated by Google. It contains no name, no email address,
+and nothing else that identifies you personally; its only purpose is to apply your daily
+passage limit and any subscription you buy to you rather than to someone else. Nobody,
+ourselves included, can use it to work out who you are.
+
+While you are a guest, **your passages are not saved**. Nothing is written to a history
+on our server, and there is nothing to sync between your devices or to recover after
+reinstalling. That is the trade: signing in is what buys a saved history.
+
+If you later sign in, we join your guest identifier to your new account wherever we can,
+so that a subscription you bought as a guest and the passages you have already used today
+carry over rather than being lost.
+
 ## Account and Sign-In
 
-MyBibleSpark requires you to sign in with **Sign in with Apple** or **Sign in with
-Google** before you can use the app — this is what keeps your subscription and daily
-usage tied to you personally rather than to a specific device or install. Account
-authentication is handled by **Firebase Authentication**, a service operated by Google.
+Signing in is **optional**. If you want your passage history saved and available on every
+device you use, you can create an account with **Sign in with Apple** or **Sign in with
+Google**. Account authentication is handled by **Firebase Authentication**, a service
+operated by Google.
 
 Depending on which provider you use and the choices you make during sign-in:
 
@@ -70,6 +91,10 @@ Anthropic's data practices are governed by their
 
 ## Saved Passage History
 
+**This applies only if you have an account.** If you are using the app as a guest, no
+passage history is created for you: our server does not write your passages anywhere, and
+a request for a history from a guest returns nothing because there is nothing to return.
+
 Your passage history is stored on our server under your account, so that it is there
 when you sign in on a new phone or reinstall the app. Each entry holds the passage
 itself — its reference, text, the explanation of why it was chosen, and its reflection
@@ -90,10 +115,12 @@ not sent to Anthropic or any other third party.
 
 ## Authentication and Account Storage (Firebase)
 
-We use **Firebase**, a service operated by Google, to authenticate your sign-in and to
-store your account-linked records on our server: your account identifier, your saved
-passage history, and a count of how many passages you have requested today. The daily
-count resets daily and is automatically deleted within about 48 hours of being created.
+We use **Firebase**, a service operated by Google, to authenticate you — whether you sign
+in with Apple or Google, or continue as a guest, which Firebase calls *anonymous
+authentication* — and to store your account-linked records on our server: your account
+identifier, your saved passage history if you have an account, and a count of how many
+passages you have requested today. The daily count resets daily and is automatically
+deleted within about 48 hours of being created.
 
 We also store a separate, device-linked request count keyed to your device identifier
 rather than your account. It caps how many passages can be generated on a single device
@@ -142,6 +169,15 @@ usage count, and your RevenueCat subscriber record — can be permanently delete
 time from within the app: go to **Settings → Delete Account**. This immediately and
 permanently deletes your account and everything listed above, and cannot be undone. You can also request deletion by contacting us at the
 email address below.
+
+If you are using the app as a guest, there is no Delete Account option, because there is
+no account and no saved history to delete — all that exists is your anonymous identifier
+and its daily usage count, and that count is deleted automatically within about 48 hours.
+We deliberately leave the option out rather than offer it, because deleting a guest
+identifier would also erase the only record connecting you to a subscription you may
+still be paying for, with no account to sign back into and recover it. If you want your
+guest identifier removed anyway, email us at the address below and we will delete it —
+cancel any active subscription with Apple or Google first.
 
 Deleting your account does **not** cancel an active auto-renewing subscription — Apple
 and Google, not us, control that billing relationship. To stop being charged, cancel

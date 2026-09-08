@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Terms of Use"
-effective_date: "August 17, 2026"
+effective_date: "September 8, 2026"
 ---
 
 These Terms of Use ("Terms") govern your access to and use of the MyBibleSpark mobile
@@ -24,16 +24,22 @@ supervision of a parent or legal guardian who agrees to these Terms.
 
 ## Account Registration
 
-You must sign in with **Sign in with Apple** or **Sign in with Google** to use the app.
-You are responsible for maintaining the security of the account you use to sign in and
-for all activity that occurs under your account. You agree to create only one account
+**An account is not required to use the app.** You may continue as a guest, and you may
+subscribe as a guest. Using the app as a guest means your passage history is not saved
+and cannot be recovered if you reinstall the app or change devices.
+
+You may optionally create an account with **Sign in with Apple** or **Sign in with
+Google** to have your passage history saved and available on any device you sign in on.
+If you do, you are responsible for maintaining the security of the account you use to
+sign in and for all activity that occurs under it. You agree to create only one account
 for your own personal use, and not to use another person's account without their
 permission. If you believe your account has been compromised, contact us immediately at
 the email address below.
 
-You may permanently delete your account and associated data at any time from within the
-app (**Settings → Delete Account**). See our [Privacy Policy](/privacy) for details on
-what is deleted and how this interacts with an active subscription.
+If you have an account, you may permanently delete it and its associated data at any time
+from within the app (**Settings → Delete Account**). See our [Privacy Policy](/privacy)
+for details on what is deleted, what applies to guests, and how this interacts with an
+active subscription.
 
 ## License to Use the App
 
@@ -139,8 +145,8 @@ embargo and are not on any U.S. Government restricted-parties list.
 ## Termination
 
 We may suspend or terminate your access to the app at any time if you violate these
-Terms. You may stop using the app at any time by uninstalling it, or permanently delete
-your account from **Settings → Delete Account**. Neither uninstalling the app nor
+Terms. You may stop using the app at any time by uninstalling it, or — if you have an
+account — permanently delete it from **Settings → Delete Account**. Neither uninstalling the app nor
 deleting your account cancels an active auto-renewing subscription — that must be
 canceled separately through your Apple App Store or Google Play account settings, as
 described in "Subscriptions, Billing, and Free Trials" above. Provisions that by their
